@@ -1,0 +1,210 @@
+*{
+	font-family: 'Titillium Web', sans-serif;
+}
+
+h4{
+	font-size: 36px;
+	color: #3b3b3b;
+	font-weight: 500;
+	margin-left: 20px;
+	margin-bottom: 0px;
+	display: inline-block;
+}
+
+
+p{
+	color: #3b3b3b;
+	font-size: 19px;
+	margin-bottom: 15px;
+	margin-top: 5px;
+	margin-left: 30px;
+}
+
+span{
+	font-size: 24px;
+	font-weight: bold;
+	color: #69a5a6;
+}
+
+.main{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #ebecf0;
+	width: 700px;
+	border-radius: 10px 10px 10px 10px;
+	float:left;
+	background-image: url("/reg.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	box-shadow: 0px 0px 10px grey;
+}
+
+img{
+	border-radius: 20px 0px 0px 20px;
+	width: 50%;
+	height: auto;
+}
+
+.main form{
+	padding: 20px 40px;
+	margin-left: 200px;
+	box-sizing: border-box;		
+}
+
+form .name{
+	position: relative;
+	border-bottom: 1px solid #adadad;
+	margin: 30px 0;
+}
+form .email{
+	position: relative;
+	border-bottom: 1px solid #adadad;
+	margin: 30px 0;
+}
+
+form .pass{
+	position: relative;
+	border-bottom: 1px solid #adadad;
+	margin: 30px 0;
+}
+
+.name input{
+	width: 100%;
+	padding 0 5px;
+	height: 40px;
+	font-size: 16px;
+	border: none;
+	background: none;
+	outline: none;
+}
+.email input{
+	width: 100%;
+	padding 0 5px;
+	height: 40px;
+	font-size: 16px;
+	border: none;
+	background: none;
+	outline: none;
+}
+
+.pass input{
+	width: 100%;
+	padding 0 5px;
+	height: 40px;
+	font-size: 16px;
+	border: none;
+	background: none;
+	outline: none;
+}
+
+.name label{
+	position: absolute;
+	top: 70%;
+	left: 5px;
+	color: #000000;
+	transform: translateY(-50%);
+	font-size: 16px;
+	pointer-events: none;
+	transition: .5s;
+}
+.email label{
+	position: absolute;
+	top: 70%;
+	left: 5px;
+	color: #000000;
+	transform: translateY(-50%);
+	font-size: 16px;
+	pointer-events: none;
+	transition: .5s;
+}
+
+.pass label{
+	position: absolute;
+	top: 70%;
+	left: 5px;
+	color: #000000;
+	transform: translateY(-50%);
+	font-size: 16px;
+	pointer-events: none;
+	transition: .5s;
+}
+
+.name span::before{
+	content: '';
+	position: absolute;
+	top: 40px;
+	left:0%;
+	height: 2px;
+	transition: .5s;
+}
+.email span::before{
+	content: '';
+	position: absolute;
+	top: 40px;
+	left:0%;
+	height: 2px;
+	transition: .5s;
+}
+
+.pass span::before{
+	content: '';
+	position: absolute;
+	top: 40px;
+	left:0%;
+	height: 2px;
+	transition: .5s;
+}
+
+.name input:focus ~ label,
+.name input:valid ~ label{
+  top: -5px;
+  color: #69a5a6;
+}
+
+.name input:focus ~ span::before,
+.name input:valid ~ span::before{
+  width: 100%;
+}
+.email input:focus ~ label,
+.email input:valid ~ label{
+  top: -5px;
+  color: #69a5a6;
+}
+
+.email input:focus ~ span::before,
+.email input:valid ~ span::before{
+  width: 100%;
+}
+
+.pass input:focus ~ label,
+.pass input:valid ~ label{
+  top: -5px;
+  color: #69a5a6;
+}
+
+.pass input:focus ~ span::before,
+.pass input:valid ~ span::before{
+  width: 100%;
+}
+
+input[type="submit"]{
+	width: 30%;
+	height: 30px;
+	margin-left: 70%;
+	border: 1px solid;
+	background-color: #69a5a6;
+	font-size: 16px;
+	border-radius: 25px;
+	color: #e9f4fb;
+	cursor: pointer;
+        outline: none;
+}
+
+input[type="submit"]:hover{
+         background-color: #588a8b;
+  	 transition: .5s;
+}
+
+
