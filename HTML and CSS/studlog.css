@@ -35,16 +35,10 @@ span{
 	width: 700px;
 	border-radius: 10px 10px 10px 10px;
 	float:left;
-	background-image: url("stud_log_new.png");
+	background-image: url("/stud_log_new.png");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	box-shadow: 0px 0px 10px grey;
-}
-
-img{
-	border-radius: 20px 0px 0px 20px;
-	width: 50%;
-	height: auto;
 }
 
 .main form{
@@ -53,7 +47,7 @@ img{
 	box-sizing: border-box;		
 }
 
-form .usn{
+form .email{
 	position: relative;
 	border-bottom: 1px solid #adadad;
 	margin: 30px 0;
@@ -65,9 +59,9 @@ form .pass{
 	margin: 30px 0;
 }
 
-.usn input{
+.email input{
 	width: 100%;
-	padding 0 5px;
+	padding: 0px 5px;
 	height: 40px;
 	font-size: 16px;
 	border: none;
@@ -77,7 +71,7 @@ form .pass{
 
 .pass input{
 	width: 100%;
-	padding 0 5px;
+	padding: 0px 5px;
 	height: 40px;
 	font-size: 16px;
 	border: none;
@@ -85,7 +79,7 @@ form .pass{
 	outline: none;
 }
 
-.usn label{
+.email label{
 	position: absolute;
 	top: 70%;
 	left: 5px;
@@ -98,7 +92,7 @@ form .pass{
 
 .pass label{
 	position: absolute;
-	top: 50%;
+	top: 70%;
 	left: 5px;
 	color: #000000;
 	transform: translateY(-50%);
@@ -107,7 +101,7 @@ form .pass{
 	transition: .5s;
 }
 
-.usn span::before{
+.email span::before{
 	content: '';
 	position: absolute;
 	top: 40px;
@@ -125,29 +119,29 @@ form .pass{
 	transition: .5s;
 }
 
-.usn input:focus ~ label,
-.usn input:valid ~ label{
-  top: -5px;
-  color: #a93a5d;
+.email input:focus ~ label,
+.email input:valid ~ label{
+top: -5px;
+color: #a93a5d;
 }
 
-.usn input:focus ~ span::before,
-.usn input:valid ~ span::before{
-  width: 100%;
+.email input:focus ~ span::before,
+.email input:valid ~ span::before{
+width: 100%;
 }
 
 .pass input:focus ~ label,
 .pass input:valid ~ label{
-  top: -5px;
-  color: #a93a5d;
+top: -5px;
+color: #a93a5d;
 }
 
 .pass input:focus ~ span::before,
 .pass input:valid ~ span::before{
-  width: 100%;
+width: 100%;
 }
 
-input[type=submit]{
+input[type="submit"]{
 	width: 30%;
 	height: 30px;
 	margin-left: 70%;
@@ -156,9 +150,18 @@ input[type=submit]{
 	font-size: 16px;
 	border-radius: 25px;
 	color: #e9f4fb;
+	cursor: pointer;
+	outline: none;
 }
 
-input[type=submit""]:hover{
-	border-color: #a93a5d;
-	transition: .5s
+input[type="submit"]:hover{
+	background-color: #983453;
+  transition: .5s;
 }
+
+
+
+
+
+
+
