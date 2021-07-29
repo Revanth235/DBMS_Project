@@ -1,0 +1,64 @@
+<DOCTYPE html>
+  <html>
+  <head>
+      <link rel="stylesheet" href="notes.css">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+      <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script>
+          function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+          }
+  
+          /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+          function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+          }
+
+          function openWindow(){
+            window.open("www.google.com"); //Change this to the notes link//
+          }
+
+      </script>
+  </head>
+
+  <body>
+      <header><button class="openbtn" onclick="openNav()">&#9776;</button></button>
+          <div class="tabs">
+          <button class="assignments" onclick="">Assignments</button>
+          <button class="notes" onclick="">Notes</button>
+          <button class="attendance" onclick="">Attendance</button>
+          <button class="grades" onclick="">Grades</button>
+          </div>
+      </header>    
+      <div class="cards">          
+
+          <button class="create_assign" onclick="location.href='../create_assign'"><span style="font-size: 50px;">+</span></button><br>                    
+
+          <div class="space"></div>
+
+          <div class="assignments"> 
+
+              <button style="background-color: #eeedfc;" onclick="openWindow()"><a href="#">Dummy</a>
+                <div style="font-size: xx-large;">
+                <div style="font-size: small;">     
+              </button>
+
+          </div>
+ 
+      </div>         
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../home">My classes</a>
+        <a href="join">Join class</a>
+        <a href="create">Create class</a>
+        <a href="login" id="logout"><i class='bx bx-log-out'></i>   Log out </a>
+      </div>        
+    </body>
+  </html>
+
