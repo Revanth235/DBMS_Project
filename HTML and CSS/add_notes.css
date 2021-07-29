@@ -1,0 +1,82 @@
+*{
+	font-family: 'Titillium Web', sans-serif;
+}
+
+h4{
+	font-size: 28px;
+	color: #3b3b3b;
+	font-weight: 500;
+	margin-left: 10px;
+	display: inline-block;
+}
+
+.main{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #ebecf0;
+	width: 700px;
+	border-radius: 10px 10px 10px 10px;
+	float:left;
+	background-image: url("/stud_log_new.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	box-shadow: 0px 0px 10px grey;
+}
+
+.main form{
+	padding: 20px 40px;
+	margin-left: 50px;
+	box-sizing: border-box;		
+}
+
+.add label{
+    text-align: center;
+    padding-top: 5px;
+    border: 1px solid;
+	margin-top: 5px;
+    width: 125px;
+    height: 30px;
+	background-color: #6d6bd6;
+	font-size: 16px;
+	border-radius: 10px;
+	color: #e9f4fb;
+	cursor: pointer;
+	outline: none;
+    display: inline-block;
+}
+
+.add label:hover{
+    background-color: #5c53bf;
+}
+
+.add input[type = "file"] {
+    z-index: -1;
+    font-size: 16px;
+    columns: #e9f4fb;
+    position: absolute;
+    left: 105px;
+	bottom: 100px;
+    border-radius: 25px;
+}
+
+.add button:hover{
+	background-color: #5c53bf;
+  transition: .5s;
+}
+
+.upload input[type = "submit"]{
+    margin-left: 500px;
+    padding: 5px;
+    width: 80px;
+   border-radius: 25px;
+   border: none;
+   background-color: #6d6bd6;
+   color: #e9f4fb;
+}
+
+.upload input[type = "submit"]:hover{
+    background-color: #5c53bf;
+}
+
