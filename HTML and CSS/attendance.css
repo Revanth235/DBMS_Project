@@ -1,0 +1,87 @@
+*{
+	font-family: 'Titillium Web', sans-serif;
+}
+
+h4{
+	font-size: 28px;
+	color: #3b3b3b;
+	font-weight: 500;
+	margin-left: 10px;
+	display: inline-block;
+}
+
+.main{
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #ebecf0;
+	width: 700px;
+	border-radius: 10px 10px 10px 10px;
+	float:left;
+	background-image: url("/stud_log_new.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	box-shadow: 0px 0px 10px grey;
+}
+
+.main form{
+	padding: 20px 40px;
+	margin-left: 50px;
+	box-sizing: border-box;		
+}
+
+.attendance p{
+    display: inline-block;
+
+}
+
+input[type = "checkbox"]{
+
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+
+.checkmark {
+    position: absolute;
+    top: 50;
+    left: 500px;
+    height: 25px;
+    width: 25px;
+    background-color: #d3d3d3;
+  }
+
+  .attendance:hover input ~ .checkmark {
+    background-color: rgb(180, 180, 180);
+  }
+
+  .attendance input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .attendance input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .attendance .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
