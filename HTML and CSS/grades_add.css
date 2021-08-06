@@ -1,0 +1,188 @@
+*{
+	font-family: 'Titillium Web', sans-serif;
+}
+
+h4{
+	font-size: 28px;
+	color: #3b3b3b;
+	font-weight: 500;
+	margin-left: 10px;
+	display: inline-block;
+}
+
+.main{
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #ebecf0;
+	width: 700px;
+	border-radius: 10px 10px 10px 10px;
+	background-image: url("/stud_log_new.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	box-shadow: 0px 0px 10px grey;
+    margin-top: 20px;
+}
+
+.main form{
+	padding: 20px 40px;
+	margin-left: 50px;
+	box-sizing: border-box;		
+}
+
+form .name{
+	position: relative;
+	border-bottom: 1px solid #adadad;
+	margin: 30px 0;
+}
+
+.name input{
+	width: 100%;
+	padding 0 5px;
+	height: 40px;
+	font-size: 16px;
+	border: none;
+	background: none;
+	outline: none;
+}
+.name label{
+	position: absolute;
+	top: 70%;
+	left: 5px;
+	color: #000000;
+	transform: translateY(-50%);
+	font-size: 16px;
+	pointer-events: none;
+	transition: .5s;
+}
+
+.name span::before{
+	content: '';
+	position: absolute;
+	top: 40px;
+	left:0%;
+	height: 2px;
+	transition: .5s;
+}
+
+.name input:focus ~ label,
+.name input:valid ~ label{
+  top: -5px;
+  color: #6d6bd6;
+}
+
+.name input:focus ~ span::before,
+.name input:valid ~ span::before{
+  width: 100%;
+}
+
+form .exam{
+	position: relative;
+	border-bottom: 1px solid #adadad;
+	margin: 30px 0;
+}
+
+.exam input{
+	width: 100%;
+	padding 0 5px;
+	height: 40px;
+	font-size: 16px;
+	border: none;
+	background: none;
+	outline: none;
+}
+.exam label{
+	position: absolute;
+	top: 70%;
+	left: 5px;
+	color: #000000;
+	transform: translateY(-50%);
+	font-size: 16px;
+	pointer-events: none;
+	transition: .5s;
+}
+
+.exam span::before{
+	content: '';
+	position: absolute;
+	top: 40px;
+	left:0%;
+	height: 2px;
+	transition: .5s;
+}
+
+.exam input:focus ~ label,
+.exam input:valid ~ label{
+  top: -5px;
+  color: #6d6bd6;
+}
+
+.exam input:focus ~ span::before,
+.exam input:valid ~ span::before{
+  width: 100%;
+}
+
+form .grade{
+	position: relative;
+	border-bottom: 1px solid #adadad;
+	margin: 30px 0;
+}
+
+.grade input{
+	width: 100%;
+	padding 0 5px;
+	height: 40px;
+	font-size: 16px;
+	border: none;
+	background: none;
+	outline: none;
+}
+.grade label{
+	position: absolute;
+	top: 70%;
+	left: 5px;
+	color: #000000;
+	transform: translateY(-50%);
+	font-size: 16px;
+	pointer-events: none;
+	transition: .5s;
+}
+
+.grade span::before{
+	content: '';
+	position: absolute;
+	top: 40px;
+	left:0%;
+	height: 2px;
+	transition: .5s;
+}
+
+.grade input:focus ~ label,
+.grade input:valid ~ label{
+  top: -5px;
+  color: #6d6bd6;
+}
+
+.grade input:focus ~ span::before,
+.grade input:valid ~ span::before{
+  width: 100%;
+}
+
+.upload input[type = "submit"]{
+    margin-left: 500px;
+    padding: 5px;
+    width: 80px;
+   border-radius: 25px;
+   border: none;
+   background-color: #6d6bd6;
+   color: #e9f4fb;
+}
+
+.upload input[type = "submit"]:hover{
+    background-color: #5c53bf;
+}
+
+
+
+
