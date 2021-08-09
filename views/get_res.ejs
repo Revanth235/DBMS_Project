@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../../../get_res.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="main">
+    <form action="">
+      <%if (filepaths.length == 0){%>
+        <h2>No responses yet.</h2>
+      <%}else{%>  
+      <%for (var i=0; i < filepaths.length; i++){%>
+        <%=filenames[i]%>     
+        <a href="<%=filepaths[i]%>" download><i class='bx bxs-download bx-hover' id="downloadbtn"></i></a>
+        <br/>
+        <br/>
+        <a href="<%=filepaths[i]%>" target="_blank"><%=i+1%>. <%=filenames[i]%></a>
+        <br/>
+        <br/>
+      <%}%>
+      <%}%>
+</form> 
+</div>
+</body>
+</html>

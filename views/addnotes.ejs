@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../../../addnotes.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main">
+    <form action="<%=url%>/upload_notes" method="POST" enctype="multipart/form-data">
+        <h4>Upload notes</h4>
+      <%if (notesadded){%>
+         <h5 style="color: darkgreen;">Added notes!</h5>
+      <%}else{%>
+     <div class="add">
+        <label class="filebutton" for="addfiles">Add files</label>
+        <input type="file" multiple name="addfiles" id="addfiles">
+     </div><br><br>
+
+     <div class="upload">
+        <input type="submit" value="Upload">
+     </div>     
+      <%}%> 
+   </form>
+</div>
+<br><br><br>
+<div class="main_1">
+   <form action="<%=url%>/upload_link" method="POST">
+      <h4>Add link</h4>
+      <%if (linkadded){%>
+         <h5 style="color: darkgreen;">Added link!</h5>
+      <%}else{%>
+  <div class="input">
+  <div class="name">
+	<input type="text" name="name" id="name" required>
+	<label for="name">Name</label>
+	<span></span>	
+ </div>
+    <div class="links">
+        <input type="text" name="link" id="link" required>
+        <label for="room">Link</label>
+        <span></span>
+  </div>
+	<input type="submit" value="Upload">
+  </div>     
+   <%}%>
+   </form>
+  </div>
+
+</body>
+</html>

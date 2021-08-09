@@ -1,0 +1,211 @@
+*{
+	font-family: 'Titillium Web', sans-serif;
+}
+
+h4{
+	font-size: 28px;
+	color: #3b3b3b;
+	font-weight: 500;
+	margin-left: 10px;
+	display: inline-block;
+}
+
+.main{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 25%);
+	background-color: #ebecf0;
+	width: 700px;
+	border-radius: 10px 10px 10px 10px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	box-shadow: 0px 0px 10px grey;
+}
+
+.main form{
+	padding: 20px 40px;
+	margin-left: 50px;
+	box-sizing: border-box;		
+}
+
+.add label{
+    text-align: center;
+    padding-top: 5px;
+    border: 1px solid;
+	margin-top: 5px;
+    width: 125px;
+    height: 30px;
+	background-color: #6d6bd6;
+	font-size: 16px;
+	border-radius: 10px;
+	color: #e9f4fb;
+	cursor: pointer;
+	outline: none;
+    display: inline-block;
+}
+
+.add label:hover{
+    background-color: #5c53bf;
+}
+
+.add input[type = "file"] {
+    z-index: -1;
+    font-size: 16px;
+    columns: #e9f4fb;
+    position: absolute;
+    left: 105px;
+	bottom: 100px;
+    border-radius: 25px;
+}
+
+.add button:hover{
+	background-color: #5c53bf;
+  transition: .5s;
+}
+
+.upload input[type = "submit"]{
+    margin-left: 500px;
+    padding: 5px;
+    width: 80px;
+   border-radius: 25px;
+   border: none;
+   background-color: #6d6bd6;
+   color: #e9f4fb;
+}
+
+.upload input[type = "submit"]:hover{
+    background-color: #5c53bf;
+}
+
+.main_1{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 25%);
+	background-color: #ebecf0;
+	width: 700px;
+	border-radius: 10px 10px 10px 10px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	box-shadow: 0px 0px 10px grey;
+}
+
+
+.main_1 form{
+	padding: 20px 40px;
+	margin-left: 50px;
+	box-sizing: border-box;		
+}
+
+form .name{
+	position: relative;
+	border-bottom: 1px solid #adadad;
+	width: 500px;
+	margin: 30px 0;
+}
+
+form .links{
+	position: relative;
+	border-bottom: 1px solid #adadad;
+	width: 500px;
+	margin: 30px 0;
+}
+
+.name input{
+	width: 100%;
+	padding: 0px 5px;
+	height: 40px;
+	font-size: 16px;
+	border: none;
+	background: none;
+	outline: none;
+}
+
+.links input{
+	width: 100%;
+	padding: 0px 5px;
+	height: 40px;
+	font-size: 16px;
+	border: none;
+	background: none;
+	outline: none;
+}
+
+.name label{
+	position: absolute;
+	top: 70%;
+	left: 5px;
+	color: #000000;
+	transform: translateY(-50%);
+	font-size: 16px;
+	pointer-events: none;
+	transition: .5s;
+}
+
+.links label{
+	position: absolute;
+	top: 70%;
+	left: 5px;
+	color: #000000;
+	transform: translateY(-50%);
+	font-size: 16px;
+	pointer-events: none;
+	transition: .5s;
+}
+
+.name span::before{
+	content: '';
+	position: absolute;
+	top: 40px;
+	left:0%;
+	height: 2px;
+	transition: .5s;
+}
+
+.links span::before{
+	content: '';
+	position: absolute;
+	top: 40px;
+	left:0%;
+	height: 2px;
+	transition: .5s;
+}
+
+.name input:focus ~ label,
+.name input:valid ~ label{
+top: -5px;
+color: #6d6bd6;
+}
+
+.name input:focus ~ span::before,
+.name input:valid ~ span::before{
+width: 100%;
+}
+
+.links input:focus ~ label,
+.links input:valid ~ label{
+top: -5px;
+color: #6d6bd6;
+}
+
+.links input:focus ~ span::before,
+.links input:valid ~ span::before{
+width: 100%;
+}
+
+input[type="submit"]{
+	width: 15%;
+	height: 30px;
+	margin-left: 85%;
+	border: 1px solid;
+	background-color: #6d6bd6;
+	font-size: 16px;
+	border-radius: 25px;
+	color: #e9f4fb;
+	cursor: pointer;
+	outline: none;
+}
+
+input[type="submit"]:hover{
+	background-color: #5c53bf;
+  transition: .5s;
+}

@@ -1,0 +1,121 @@
+*{
+	font-family: 'Titillium Web', sans-serif;
+}
+
+h2{
+	font-size: 28px;
+	color: #3b3b3b;
+	font-weight: 500;
+	margin-left: 10px;
+	display: inline-block;
+}
+
+h3{
+	font-size: 22px;
+	color: #3b3b3b;
+	font-weight: 250;
+	display: inline-block;
+}
+
+.main{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	background-color: #ebecf0;
+	width: 700px;
+	border-radius: 10px 10px 10px 10px;
+	float:left;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	box-shadow: 0px 0px 10px grey;
+}
+
+.main form{
+	padding: 20px 40px;
+	margin-left: 50px;
+	box-sizing: border-box;		
+}
+
+.stud button{
+    text-align: center;
+    border: 1px solid;
+	margin-top: 5px;
+	margin-left: 50px;
+	padding: 10px;
+	background-color: #6d6bd6;
+	font-size: 16px;
+	border-radius: 10px;
+	color: #e9f4fb;
+	cursor: pointer;
+	outline: none;
+    display: inline-block;
+}
+
+.stud button:hover{
+	background-color: #5c53bf;
+  	transition: .5s;
+}
+
+#downloadbtn{
+	font-size: x-large;	
+	color:#5c53bf;
+}
+
+#downloadbtn:hover{	
+	color: #6d6bd6;	
+}
+
+.description{
+	word-wrap: break-word;
+}
+
+input[type="submit"]{
+	width: 15%;
+	height: 30px;
+	margin-left: 80%;
+	border: 1px solid;
+	background-color: #6d6bd6;
+	font-size: 16px;
+	border-radius: 25px;
+	color: #e9f4fb;
+	cursor: pointer;
+	outline: none;
+}
+
+input[type="submit"]:hover{
+	background-color: #5c53bf;
+  transition: .5s;
+}
+
+.add label{
+    text-align: center;
+    border: 1px solid;
+    width: 125px;
+    height: 30px;
+	background-color: #6d6bd6;
+	font-size: 16px;
+	border-radius: 10px;
+	color: #e9f4fb;
+	cursor: pointer;
+	outline: none;
+    display: inline-block;
+}
+
+.add label:hover{
+    background-color: #5c53bf;
+}
+
+.add input[type = "file"]{
+    z-index: -1;
+    font-size: 16px;
+    columns: #e9f4fb;
+    position: absolute;
+    left: 110px;
+    /*top: 1px;*/
+    border-radius: 25px;
+}
+
+.add button:hover{
+	background-color: #5c53bf;
+  transition: .5s;
+}

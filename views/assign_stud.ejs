@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../../assign_stud.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="main">
+    <form action="/s/<%=assn.class_id%>/<%=assn.id%>/<%=assn.assn_name%>/<%=assn.assn_deadline%>/assign_submit" method="POST" encType="multipart/form-data">
+      <h2><%=assn.assn_name%></h2>
+      <br>
+      <h3>Submit by: <%=new Date(assn.assn_deadline).toISOString().slice(0, 16).replace('T', ' ');%></h3>
+
+    <div class="description">
+       <h3>Description:</h3>
+       <br>
+       <%=assn.description%>
+     </div>
+     <br>
+     <%for (var i=0; i < filepaths.length; i++){%>
+      <%=filenames[i]%>     
+      <a href="<%=filepaths[i]%>" download><i class='bx bxs-download bx-hover' id="downloadbtn"></i></a>
+      <br/>
+      <br/>
+      <embed src="<%=filepaths[i]%>" width="500px" height="500px">
+      <br/>
+      <br/>
+     <%}%>
+     <%if (!submitted){%>
+     <div class="add">
+        <label class="filebutton" for="addfiles">Add files</label>
+        <input type="file" name="addfiles" id="addfiles">           
+	      <input type="submit" value="Post">
+     </div>  
+     <%}else{%>
+      <h2 style="color:darkgreen">Submission successful!</h2> 
+     <%}%>
+    </div>
+</form>
+</div>
+</body>
+</html>

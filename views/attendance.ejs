@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../../../attendance.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+  </script>
+</head>
+<body>
+
+  <header><button class="openbtn" onclick="openNav()">&#9776;</button>
+    <div class="tabs">
+    <%if (isTeacher){%>
+    <button class="assignments" onclick="location.href = './'">Assignments</button>  
+    <%}else{%>    
+    <button class="assignments" onclick="location.href = '../'">Assignments</button>
+    <%}%>
+    <button class="notes" onclick="location.href = './notes'">Notes</button>
+    <button class="attendance">Attendance</button>
+    </div>
+</header>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="/home">My classes</a>
+      <a href="/join">Join class</a>
+      <a href="/create">Create class</a>
+      <a href="/logout" id="logout"><i class='bx bx-log-out'></i>   Log out </a>
+      </div>
+  <div class="main">
+    <%if (isTeacher){%>  
+    <form action="<%=url%>/submit" method="POST">
+        <h4>Attendance</h4>   
+        <br><br>      
+         <%for (var i=0; i < list.length; i++){%>            
+            <div class="attendance"> 
+            <%=list[i].username%>            
+            <label class="container">
+            <input type="checkbox" name="check" value="<%=list[i].id%>">
+            <span class="checkmark"></span>            
+            <hr style="height: 1px;border: none;background-color: lightgray;"/>                      
+            </label>            
+            </div>   
+         <%}%>  
+     <input type="submit" value="Submit">
+   </form>
+   <%}else{%>
+     <h4>Your attendance for this class is : <span style="color: darkgreen;"><%=percentage%>%</span></h4> 
+   <%}%> 
+  </div>
+
+</body>
+</html>

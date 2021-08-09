@@ -1,0 +1,69 @@
+<DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="home.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+	<script>
+		function openNav() {
+  			document.getElementById("mySidebar").style.width = "250px";
+  			document.getElementById("main").style.marginLeft = "250px";
+			document.getElementById("welcome").style.marginLeft = "250px";  		
+		}
+
+		/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+		function closeNav() {
+			document.getElementById("mySidebar").style.width = "0";
+			document.getElementById("main").style.marginLeft = "0";
+			document.getElementById("welcome").style.marginLeft = "25";
+		}
+	</script>
+</head>
+<body>
+	<header><button class="openbtn" onclick="openNav()">&#9776;</button><div class="welcome" id="welcome">Welcome, <%=USERNAME%>!</div></header>
+	<div id="mySidebar" class="sidebar">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="home">My classes</a>
+		<a href="join">Join class</a>
+		<a href="create">Create class</a>
+		<a href="logout" id="logout"><i class='bx bx-log-out'></i>   Log out </a>
+	  </div>
+	  
+	  <div id="main">		  
+		<h3>Classes joined</h3>
+		<div class="cards">
+			<%if (typeof cardsList == 'undefined'){%>
+				<h5>No classes joined yet</h5>
+			<%}else{%>
+				<%for (var i=0; i < cardsList.length; i++){%>
+						<button style="background-image: url('<%=cardsList[i].theme%>.png');" onclick="location.href = '/s/<%=cardsList[i].id%>';">
+							<div class="btntext" style="text-align: left;"><span style="font-size: larger;font-weight: 600;"><%=cardsList[i].class_name%></span><br/>
+							<%=cardsList[i].room_name%>
+							</div>
+						</button>  <!--cards to add subjects-->			
+				<%}%>
+			<%}%>	
+		</div>		
+		<hr style="height: 1px;border: none;background-color: lightgray;"/>
+		<h3>Classes created</h3>
+		<div class="cards1">
+			<%if (typeof createdCardsList == 'undefined'){%>
+				<h5>No classes created yet</h5>
+			<%}else{%>
+				<%for (var i=0; i < createdCardsList.length; i++){%>
+						<button style="background-image: url('<%=createdCardsList[i].theme%>.png');" onclick="location.href = 'r/<%=createdCardsList[i].class_id%>';">
+							<div class="btntext" style="text-align: left;"><span style="font-size: larger;font-weight: 600;"><%=createdCardsList[i].class_name%></span><br/>
+							<%=createdCardsList[i].room_name%>
+							<br/>
+							<%=createdCardsList[i].class_id%>
+							</div>
+						</button>  <!--cards to add subjects-->			
+				<%}%>
+			<%}%>	
+		</div>				
+	  </div>
+</body>
+</html>

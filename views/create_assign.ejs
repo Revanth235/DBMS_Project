@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="create_assign.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main">
+    <form action="create_assign_end" method="POST" enctype="multipart/form-data">
+      <h4>Create Assignment</h4>      
+      <%if (invalid){%>
+        <h5 style="color: darkred;">*Assignment name needs to be unique</h5>  
+      <%}%>
+  <div class="input">
+  <div class="name">
+	<input type="text" name="name" id="name" required>
+	<label for="name"> Assignment name</label>
+	<span></span>
+    </div>
+
+    <div class="description">
+      <label for="desc">Description</label><br>
+	<textarea id="desc" name="desc" maxlength="750"></textarea>
+	<span></span>
+     </div>
+     <div class="hours">
+      <label for="mindate">Time-Period(in hours):</label>
+       <input type="number" id="mindate" name="date" min="1" max="24">
+      </div> 
+      <br>    
+    <div class="add">
+        <label class="filebutton" for="addfiles">Add files</label>
+        <input type="file" multiple name="addfiles" id="addfiles">
+     </div>
+    </div>
+	<input type="submit" value="Post">
+</div>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+*{
+    font-family: 'Titillium Web', sans-serif; /*font*/
+}
+
+header{
+background-color: #904fc3; /*header part #dbdbdb*/
+padding: 20px;
+width: 100%;
+position: fixed;
+top: 0;
+left: 0;
+text-align: left;
+overflow: hidden;
+}
+
+.login{
+    color:azure;
+    width: 90px;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    background-color: #904fc3;
+    cursor: pointer;
+}
+
+.signup{
+    color: azure;
+    width: 90px;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    background-color: #904fc3;
+    cursor: pointer;
+}
+
+.login:hover{
+    background-color: #be9de2;
+}
+
+.signup:hover{
+    background-color: #be9de2;
+}
+
+h1{
+    position: absolute;
+    top: 500;
+    left: 50;
+    color: white;
+    font-weight: 900;
+}
+
+p{
+    position: absolute;
+    top: 550;
+    left: 50;
+    color: white;
+    font-size: 20px;
+
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+}
+
+.buttons{
+    transform: translate(75%);
+}
